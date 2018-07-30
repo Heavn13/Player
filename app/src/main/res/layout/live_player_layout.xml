@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activty_layout">
+
+    <io.vov.vitamio.widget.VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/loading"/>
+        <TextView
+            android:id="@+id/loading_text"
+            android:layout_below="@id/loading"
+            android:text="视频正在玩命加载中····"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:visibility="gone"
+        android:background="@color/orange"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:id="@+id/live_back"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/live_name"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="7.0"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:text="video_name"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/sys_time"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:gravity="right"
+            android:text="00:00"
+            android:layout_weight="2.0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:id="@+id/imageView_play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bottom_play_stop" />
+
+    </LinearLayout>
+
+</RelativeLayout>

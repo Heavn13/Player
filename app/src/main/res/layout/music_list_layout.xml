@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/music_list_interface">
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/orange"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:background="@drawable/back" />
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="搜索本地歌曲"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:visibility="invisible"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/back"
+            android:layout_toLeftOf="@+id/search"
+            android:layout_toStartOf="@+id/search" />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/search"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/music_list"
+        android:layout_below="@+id/relativelayout"
+        android:layout_above="@+id/relativelayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></ListView>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/music" />
+
+        <TextView
+            android:id="@+id/song_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Song"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Singer"
+            android:textSize="12sp"
+            android:layout_marginLeft="7dp"
+            android:layout_below="@+id/song_name"
+            android:layout_toEndOf="@+id/imageView" />
+
+        <ImageButton
+            android:id="@+id/play_pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bottom_play_stop"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

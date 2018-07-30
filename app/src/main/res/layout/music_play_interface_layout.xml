@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/orange"
+        android:orientation="horizontal"
+        android:id="@+id/relativeLayout">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:background="@drawable/back" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/singer"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="160dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Song"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/singer"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Singer"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_below="@+id/song_name"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="400dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:thumb="@drawable/seekbar_thumb"/>
+
+    <TextView
+        android:id="@+id/current_time"
+        android:layout_width="50dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/total_time"
+        android:layout_alignBottom="@+id/total_time"
+        android:layout_alignStart="@+id/seekBar" />
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="50dp"
+        android:layout_marginRight="-15dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar"
+        android:layout_marginTop="18dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/linearLayout">
+
+        <ImageButton
+            android:id="@+id/type_interface"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/type" />
+
+        <ImageButton
+            android:id="@+id/previous_interface"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/last" />
+
+        <ImageButton
+            android:id="@+id/play_pause_interface"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_play_stop" />
+
+        <ImageButton
+            android:id="@+id/next_interface"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/next"/>
+
+        <ImageButton
+            android:id="@+id/song_list_interface"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/song_list"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
